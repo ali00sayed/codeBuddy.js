@@ -1,0 +1,38 @@
+// level {2}
+
+
+//Write a function in Javascript to print the sum of the first n fibonacci numbers.
+//Input: 6
+
+
+var fibonaci = function(n){
+if(n===1){
+return [0,1];
+}
+else{
+var s =fibonaci(n-1);
+s.push(s[s.length-1]+s[s.length-2]);
+return s;
+}
+};
+console.log(fibonaci(6));
+
+function fibSum(n){
+    if(n===1){
+        return 1;
+    }
+    if(n==2){
+        return 2;
+    }
+    let sum = fibSum(n-1)+n;
+    return sum;
+}
+console.log(fibSum(6));
+
+//OUTPUT:
+[ 0, 1, 1, 2, 3, 5, 8 ]
+20
+
+
+
+
